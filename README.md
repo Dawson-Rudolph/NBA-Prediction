@@ -6,12 +6,24 @@ This is an NBA game & MVP prediction project. The main idea is to scrape a desir
 
 ## Web-Scrapping
 
+Description of the web-scraping process
+
 ## Machine Learning
+
+Description of the machine learning models
 
 ## Predicting NBA Games
 
+Description of predictions of NBA games
+
 ## Predicting NBA MVP
+
+Description of predictions of NBA MVPs
 
 ## Technologies
 
+Description of the technologies used
+
 ## How-To
+
+Description of how to use & implement/create this project
