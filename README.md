@@ -40,7 +40,7 @@ There are three main functions used to scrape basketballreference.com for game d
 
 #### Read Stats
 
-The following function is read_stats, that has three inputs: soup, team, & stat. Soup represents the output of the parse_html function, while team and stat correspond to the NBA team and specific stat that the function is reading. This function then creates a new data frame that consists of the data read from the soup input with the attributes being the inputted team and stat. This data fram is then manipulated to turn all the values to be numerically represented as is needed for our machine learning model to properly interpret the data. The data frame is then returned.
+  The following function is read_stats, that has three inputs: soup, team, & stat. Soup represents the output of the parse_html function, while team and stat correspond to the NBA team and specific stat that the function is reading. This function then creates a new data frame that consists of the data read from the soup input with the attributes being the inputted team and stat. This data fram is then manipulated to turn all the values to be numerically represented as is needed for our machine learning model to properly interpret the data. The data frame is then returned.
 
 #### Read Season Info
 
