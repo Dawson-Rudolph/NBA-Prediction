@@ -9,7 +9,7 @@
   Web-Scrapping was the first and most crucial part of this project. Without having the proper type and amount of data, I would not be able to train and test the machine learning models correctly. Starting off with the packages for the scrapping, I used BeautifulSoup, Pandas, PlayWright, and Time. Each of these packages were crucial for the success of the data scrapping functions.
 
   
-### Get Data
+### *Get Data*
 
 There are three main functions used to scrape basketballreference.com for game data (all found in the Get_Data.ipynb file): get_html(), scrape_season(), & scrape_game(). 
 
@@ -26,7 +26,7 @@ There are three main functions used to scrape basketballreference.com for game d
   The last function in the Get_Data file is scrape_game, this function takes one input: standings_file. This is the file that we just created in the previous function that holds all the game data from a particular season or set of seasons. This function follows a similiar principle to scrape_season. It starts off with opening the inputted file and uses Beautiful Soup to once again extract the proper links. It then creates an array of links of box scores from the previous links we grabbed. The function then loops through each of the box score links and uses the get_html function to grab all of the necessary data from the HTML and writes said data to the scores directory which had its path created at the top of the loop. The loop has catches for cases of HTML not being grabbed and a path already being created.
 
 
-### Parse Data
+### *Parse Data*
 
   There are four main functions used to parse the extracted data from Get_Data (all found in the Get_Data.ipynb file): parse_html(), read_line_score(), read_stats(), read_season_info().
 
@@ -46,7 +46,7 @@ The following function is read_stats, that has three inputs: soup, team, & stat.
 
   The last function is read_season_info, which has one input that is soup, which as stated before is the output of the parse_html function. This function first grabs the "nav" container of the parsed html and finds all hrefs from said container. The function then assigns the extracted season name from the href to the season variable and returns said season. 
 
-### Creating The NBA Games CSV
+### *Creating The NBA Games CSV*
 
   Following the creation of the Parse Data functions, I then put them to use to grab all of the box score data of every game from every season that we extracted in the Get Data file. To do this, I looped through each box score in box_scores (all the extracted box scores from the Scores Directory which was where all of our data was stored after extracting it in Get Data), first parsing each box score using the parse_html function. I then used that parsed data to call the read_line_score function to get the line score as well as all the teams. I then looped through each team in teams, getting both the basic and advanced stats for the team using the read_stats function. After obtaining all the stats I then created two pandas data frames that contained the statistical totals and maxes for the given team. I also turned all the column names to be all lowercase and added "_max" to the end of the max stats so that they were properly labeled. I then concatenated both sets of stats to create a new summary data frame. I then removed all duplicates and empty columns from the summary data frame before adding the given team summary to the overall summaries array. After filling summaries I concatenated it to summary, and then concatenated summary and line score to create a new data frame called game. I then performed some data cleaning where I changed certain values to have numeric representation like "home" and "away" being represented as 0 & 1. I also added labeled data about the opponent stats, which essentially created a mirror between data frames where you would see two sets of stats flipped around between a game. This would then be used to create a new data frame called full_game whichI edited to add the season, date, & winner columns to the frame. Lastly I appended the full_game data frame to the games array. This process would repeat for each team and all of their games. After every team had been accounted for, I created a new data fram called games_df which I would then turn to a CSV file called "nba_games.csv" which is included in this repository.
 
