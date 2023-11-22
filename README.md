@@ -86,19 +86,19 @@ Description of predictions of NBA MVPs
 
   Python is a versatile and high-level programming language that is known for its readability and simplicity. the language was reated by Guido van Rossum in the late 1980s. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python's syntax emphasizes code readability, making it an ideal choice for beginners and experienced developers alike. The language has a large standard library and lots of contributions from third-party packages and frameworks that facilitate development across various domains, including web development, data science, artificial intelligence, and automation. Python's interpreted nature, dynamic typing, and automatic memory management contribute to its flexibility and rapid development capabilities, making it a go-to language for diverse projects.
 
-#### *Pandas*
+#### Pandas
 
   I used Pandas in almost all of my scripts within this project, from data scraping and manipulation in the Parse_Data and Get_Data scripts to the editing of data frames in Predict_MVP and Predict_Games. This package was crucial for the manipulation, cleaning, visualization, accuisition of data within this project. The following is an overview of the library:
 
   Pandas is a powerful open-source data manipulation and analysis library for Python. It provides easy-to-use data structures, such as Series and DataFrame, that are designed to efficiently handle and manipulate structured data. Pandas is particularly well-suited for working with tabular data, making it a go-to tool for data cleaning, exploration, and analysis in various domains, including data science and machine learning. Due to its great functionality, Pandas allows users to perform tasks like filtering, sorting, grouping, merging, and reshaping data, as well as handling missing values. It integrates very well with other popular Python libraries like NumPy and Matplotlib, providing a comprehensive environment for data analysis and visualization. Overall, Pandas is an essential tool for anyone working with data in Python, offering a flexible and intuitive framework for data manipulation and analysis
 
-#### *SkLearn*
+#### Sci-Kit-Learn
 
   I used SkLearn in both my Predict_MVP and Predict_Games scripts. This library was crucial for the machine learning portion of this project due to the extensive amount of tools and mdoels it gives users access to. The main models I used from this library were: Ridge Regression and Random Forest. Alongside those models, I also used the library to help with feature selection, preprocessing, splitting of time series, and calculation of accuracy scores for the models. The following is an overview of the library:
 
   Scikit-learn, whcih is generally referred to as sklearn, is a comprehensive and widely-used machine learning library for Python. It was developed as an open-source project, scikit-learn provides a simple and efficient tool for data analysis and modeling. The library includes a large set of tools for various machine learning tasks such as classification, regression, clustering, dimensionality reduction, and more. Scikit-learn is built on NumPy, SciPy, and Matplotlib, leveraging their capabilities for efficient numerical operations, scientific computing, and data visualization. It has a great interface, which makes it accessible for both beginners and experienced practitioners. Scikit-learn supports a wide range of machine learning algorithms and provides tools for model selection, evaluation, and preprocessing. Its flexibility, ease of use, and extensive documentation have contributed to its popularity within the data science and machine learning communities.  
 
-#### *Beautiful Soup*
+#### Beautiful Soup
 
   I used Beautiful Soup in both Parse_Data and Get_Data scripts. This library helped me in the web scrapping process where I had to scrpae data for games from the basketballreference.com. It allowed me to grab the information I needed and convert it into a readable format to be later analyzed. As my entire project was based on the collection of proper game data from many seasons, Beautiful Soup played a crucial role in its success. The following is an overview of the library:
 
